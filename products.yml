@@ -1,0 +1,19 @@
+- name: Bananas
+  code: 01
+  price: 0.99
+  price unit: kg
+
+- name: Kiwis
+  code: 02
+  price: 1.22
+  price unit: items
+
+- name: Oranges
+  code: 03
+  price: 1.25
+  price unit: kg
+
+- name: Peaches
+  code: 04
+  price: 1.75
+  price unit: kg
