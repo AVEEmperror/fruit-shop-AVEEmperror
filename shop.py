@@ -5,6 +5,7 @@ codes = src.parse(data = src.parsed_pds, key = 'code')
 prices = src.parse(data = src.parsed_pds, key = 'price')
 units = src.parse(data = src.parsed_pds, key = 'price unit')
 
+tot_earned = 0
 top_paid = 0
 top_paid_name = ''
 procsd = 0
@@ -13,6 +14,8 @@ while 1:
     customer = src.serve_cust(names = names, codes = codes, prices = prices, units = units)
     src.summary(customer)
     paid = src.totPaid(customer)
+
+    tot_earned += paid
 
     if paid > top_paid:
         top_paid = paid
@@ -23,4 +26,4 @@ while 1:
     if src.IS_ALL_P() == 1:
         break
 
-src.day_finished(name = top_paid_name, processed = procsd, top_paid = top_paid)
+src.day_finished(name = top_paid_name, processed = procsd, top_paid = top_paid, tot_paid = tot_earned)

@@ -104,8 +104,9 @@ def IS_ALL_P() -> bool:
         elif ans == 'N':
             return 1
 
-def day_finished(top_paid: float, name: str, processed: int):
+def day_finished(top_paid: float, name: str, processed: int, tot_paid = float):
     print(f'\nTOTAL CUSTOMERS TODAY: {processed}')
     print(f"PAID THE MOST: {name.upper()}, {top_paid} EURO'S.")
+    print(f"Total earned this day: {tot_paid} EURO'S.")
     print(f"\nThanks for visiting our shop! Come back soon!")
     print(f"\n...Actually, no, don't do that.")
